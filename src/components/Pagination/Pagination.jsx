@@ -4,8 +4,9 @@ import './Pagination.sass';
 
 function Pagination({ page }) {
     let paginationList = [];
+
     for (let i = 1; i <= 10; i++) {
-        const activeClass = i == page ? 'pagination__link--active' : '';
+        const activeClass = i === page ? 'pagination__link--active' : '';
         paginationList.push(
             <Link
                 key={i}

@@ -40,7 +40,7 @@ function App() {
     React.useEffect(() => {
         const pageNum = new URLSearchParams(location.search).get('page');
         if (pageNum) {
-            setPage(pageNum);
+            setPage(Number(pageNum));
         }
     }, [location]);
 
